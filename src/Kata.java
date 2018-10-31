@@ -5,19 +5,19 @@ public class Kata {
     public static int[] countPositivesSumNegatives(int[] input) {
         if (input == null || input.length == 0)
             return new int[] {};
-        int[] result = new int[2];
+        int countPositives = 0, sumNegatives = 0;
         for (int i : input) {
             if (i > 0)
-                result[0]++;
+                ++countPositives;
             else if (i < 0)
-                result[1] += i;
+                sumNegatives += i;
         }
-        return result;
+        return new int[] {countPositive, sumNegatives};
     }
 
     public static void main(String[] args) {
        int[] res = Kata.countPositivesSumNegatives(null);
-//       System.out.println(res[0]);
-//       System.out.println(res[1]);
+       System.out.println(res[0]);
+       System.out.println(res[1]);
     }
 }
