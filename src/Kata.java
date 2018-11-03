@@ -12,7 +12,7 @@ public class Kata {
             else if (i < 0)
                 sumNegatives += i;
         }
-        return new int[] {countPositive, sumNegatives};
+        return new int[] {countPositives, sumNegatives};
     }
 
     public static void main(String[] args) {
